@@ -1,17 +1,24 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaView, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import Navigation from './src/navigation/navigation';
 
 const App = () => {
   return ( 
     <NavigationContainer>
-      <SafeAreaView>
-        <Text>HOME</Text>
-      </SafeA>
+      {/* <SafeAreaView style={styles.container}>
+      </SafeAreaView> */}
+      <Navigation/>
     </NavigationContainer>
    );
 }
- 
+
 export default App;
+const styles=StyleSheet.create({
+  container:{
+    backgroundColor:'white',
+    flex:1,
+  }
+})
 
 
