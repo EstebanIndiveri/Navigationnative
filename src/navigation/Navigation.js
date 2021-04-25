@@ -4,6 +4,8 @@ import About from '../views/About';
 import Contact from '../views/Contact';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import HomeStack from './HomeStack';
+import AboutStack from './AboutStack';
+import ContactStack from './ContactStack';
 
 // const Stack=createStackNavigator();
 const Tab=createBottomTabNavigator();
@@ -18,12 +20,12 @@ const Navigation = () => {
             />
             <Tab.Screen
             name="About"
-            component={About}
+            component={AboutStack}
             options={{title:'About'}}
             />
             <Tab.Screen
             name="Contact"
-            component={Contact}
+            component={ContactStack}
             options={{title:'Contact'}}
             />
         </Tab.Navigator>
