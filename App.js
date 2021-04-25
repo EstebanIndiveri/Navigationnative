@@ -1,8 +1,8 @@
 import React from 'react';
+import Navigation from './src/navigation/Navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import Navigation from './src/navigation/navigation';
-
+// import Navigation from './src/navigation/navigation';
 const App = () => {
   return ( 
     <NavigationContainer>

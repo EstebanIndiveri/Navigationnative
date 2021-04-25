@@ -1,37 +1,58 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from '../views/Home';
 import About from '../views/About';
 import Contact from '../views/Contact';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import HomeStack from './HomeStack';
 
-const Stack=createStackNavigator();
+// const Stack=createStackNavigator();
+const Tab=createBottomTabNavigator();
 
 const Navigation = () => {
-    return ( 
-        <Stack.Navigator>
-            <Stack.Screen
+    return(
+        <Tab.Navigator>
+            <Tab.Screen
             name="Home"
-            component={Home}
-            options={{
-                title:'Home',
-            }}
+            component={HomeStack}
+            options={{title:'Home'}}
             />
-            <Stack.Screen
+            <Tab.Screen
             name="About"
             component={About}
-            options={{
-                title:'About',
-            }}
+            options={{title:'About'}}
             />
-            <Stack.Screen
+            <Tab.Screen
             name="Contact"
             component={Contact}
-            options={{
-                title:'Contact',
-            }}
+            options={{title:'Contact'}}
             />
-        </Stack.Navigator>
-     );
+        </Tab.Navigator>
+    )
+    // return ( 
+    //     <Stack.Navigator>
+    //         <Stack.Screen
+    //         name="Home"
+    //         component={Home}
+    //         options={{
+    //             title:'Home',
+    //         }}
+    //         />
+    //         <Stack.Screen
+    //         name="About"
+    //         component={About}
+    //         options={{
+    //             title:'About',
+    //         }}
+    //         />
+    //         <Stack.Screen
+    //         name="Contact"
+    //         component={Contact}
+    //         options={{
+    //             title:'Contact',
+    //         }}
+    //         />
+    //     </Stack.Navigator>
+    //  );
 }
  
 export default Navigation;
