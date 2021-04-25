@@ -14,6 +14,11 @@ const Home = (prop) => {
             onPress={()=>navigation.navigate('Contact')}
             title="Ir a Contact"
             />
+            {/* Declarated spec Stack Screen to Tab */}
+            <Button
+            onPress={()=>navigation.navigate('Contact',{screen:'Courses'})}
+            title="Ir a curso"
+            />
         </View>
      );
 }
