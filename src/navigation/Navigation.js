@@ -1,60 +1,28 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import About from '../views/About';
-import Contact from '../views/Contact';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeStack from './HomeStack';
-import AboutStack from './AboutStack';
+// import AboutStack from './AboutStack';
 import ContactStack from './ContactStack';
+import Home from '../views/Home'
+import Contact from '../views/Contact'
 
-// const Stack=createStackNavigator();
-const Tab=createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 const Navigation = () => {
     return(
-        <Tab.Navigator>
-            <Tab.Screen
+        <Drawer.Navigator>
+            <Drawer.Screen
             name="Home"
             component={HomeStack}
             options={{title:'Home'}}
             />
-            <Tab.Screen
-            name="About"
-            component={AboutStack}
-            options={{title:'About'}}
-            />
-            <Tab.Screen
+             <Drawer.Screen
             name="Contact"
             component={ContactStack}
             options={{title:'Contact'}}
             />
-        </Tab.Navigator>
+        </Drawer.Navigator>
     )
-    // return ( 
-    //     <Stack.Navigator>
-    //         <Stack.Screen
-    //         name="Home"
-    //         component={Home}
-    //         options={{
-    //             title:'Home',
-    //         }}
-    //         />
-    //         <Stack.Screen
-    //         name="About"
-    //         component={About}
-    //         options={{
-    //             title:'About',
-    //         }}
-    //         />
-    //         <Stack.Screen
-    //         name="Contact"
-    //         component={Contact}
-    //         options={{
-    //             title:'Contact',
-    //         }}
-    //         />
-    //     </Stack.Navigator>
-    //  );
 }
  
 export default Navigation;
